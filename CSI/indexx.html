@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Risk Predictor</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Financial Risk Predictor</h1>
+
+        <form id="riskForm">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="income">Income:</label>
+            <input type="number" id="income" name="income" required>
+
+            <label for="credit_score">Credit Score:</label>
+            <input type="number" id="credit_score" name="credit_score" required>
+
+            <label for="loan_amount">Loan Amount:</label>
+            <input type="number" id="loan_amount" name="loan_amount" required>
+
+            <label for="transaction_history">Transaction History:</label>
+            <input type="number" id="transaction_history" name="transaction_history" required>
+
+            <button type="submit">Predict Risk</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

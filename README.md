@@ -118,6 +118,3 @@ CSI demonstrates how a structured web-based ticket management system can be deve
 * Undergraduate Student
 * Field of Study: Electronics and Computer Engineering
 * This project was developed as part of the CSI Idea Hackathon powered by Union Bank of India, with a focus on workflow automation, service ticket management, and applied software engineering principles.
-
-
-Just tell me what you need next.

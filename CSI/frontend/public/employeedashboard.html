@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Union Bank Employee Dashboard</title>
+    <link rel="stylesheet" href="employeedashboard.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Union Bank</h2>
+        <ul>
+            <li class="active">Dashboard</li>
+            <li>Service Tickets</li>
+            <li>Customer Requests</li>
+            <li>Logout</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Navbar -->
+        <div class="navbar">
+            <h2>Employee Dashboard</h2>
+            <button>Logout</button>
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="cards">
+            <div class="card">Total Tickets: 30</div>
+            <div class="card">Pending Requests: 12</div>
+            <div class="card">Resolved Issues: 18</div>
+            <div class="card">Customer Feedback: 85%</div>
+        </div>
+
+        <!-- Service Ticket Table -->
+        <div class="table-container">
+            <h2>Service Tickets</h2>
+            <input type="text" id="search" placeholder="Search Tickets...">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticket ID</th>
+                        <th>Customer Name</th>
+                        <th>Issue</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1001</td>
+                        <td>Rahul Sharma</td>
+                        <td>Account Locked</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr>
+                        <td>#1002</td>
+                        <td>Anjali Verma</td>
+                        <td>Transaction Error</td>
+                        <td>Resolved</td>
+                    </tr>
+                    <tr>
+                        <td>#1003</td>
+                        <td>Vikas Patel</td>
+                        <td>Credit Card Issue</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Union Bank - New User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #d00000, #001f80);
+            color: white;
+        }
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+            background: linear-gradient(to bottom, #d00000, #001f80);
+            height: 100vh;
+        }
+        .sidebar h2 {
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+            text-align: left;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            background: #001f80;
+            padding: 10px 20px;
+        }
+        nav ul li {
+            list-style: none;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            background: #d00000;
+            border-radius: 5px;
+        }
+        .balance-card, .transactions-card, .services-container {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .balance-card h2, .transactions-card h3, .services-container h3 {
+            color: #001f80;
+        }
+        .balance {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .service-btn {
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .red {
+            background: #d00000;
+        }
+        .blue {
+            background: #001f80;
+        }
+        .service-btn:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .transactions-card p {
+            font-style: italic;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Union Bank</h2>
+        <ul>
+            <li class="active"><a href="#">Dashboard</a></li>
+            <li><a href="#">Statistics</a></li>
+            <li><a href="#">Report</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Navbar -->
+        <nav>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Login/Register</a></li>
+            </ul>
+        </nav>
+
+        <!-- Balance Section -->
+        <div class="balance-card">
+            <h2>Total Balance</h2>
+            <p class="balance">₹0</p>
+            <p class="card-info">Card Info: No Card Linked</p>
+        </div>
+
+        <!-- Customer Services -->
+        <div class="services-container">
+            <h3>Customer Services</h3>
+            <div class="services-grid">
+                <button class="service-btn red">Simulate Offline Mode</button>
+                <button class="service-btn blue">Voice Query</button>
+                <button class="service-btn red">Service Ticket</button>
+                <button class="service-btn blue">Appointment</button>
+            </div>
+        </div>
+
+        <!-- Transactions -->
+        <div class="transactions-card">
+            <h3>Past Transactions</h3>
+            <p class="no-transactions">No transactions available.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+        }
+        button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Generated Service Ticket</h2>
+        <div id="ticketDetails">Loading ticket details...</div>
+        <button onclick="fetchTicketDetails()">Refresh Ticket</button>
+    </div>
+    <script>
+        async function fetchTicketDetails() {
+            try {
+                const response = await fetch("/get-ticket-details");
+                const result = await response.json();
+                
+                if (result.success) {
+                    document.getElementById("ticketDetails").innerHTML = `
+                        <p><strong>Name:</strong> ${result.data.name}</p>
+                        <p><strong>Email:</strong> ${result.data.email}</p>
+                        <p><strong>Issue:</strong> ${result.data.issue}</p>
+                        <p><strong>Details:</strong> ${result.data.details}</p>
+                    `;
+                } else {
+                    document.getElementById("ticketDetails").innerHTML = "Error fetching ticket details.";
+                }
+            } catch (error) {
+                console.error("Error fetching ticket details:", error);
+                document.getElementById("ticketDetails").innerHTML = "Server error. Please try again later.";
+            }
+        }
+
+        // Fetch ticket details on page load
+        fetchTicketDetails();
+    </script>
+</body>
+</html>

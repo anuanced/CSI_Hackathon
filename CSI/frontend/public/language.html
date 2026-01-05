@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Union Bank Dashboard</title>
+    <link rel="stylesheet" href="language.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="../public/logo.png" alt="Union Bank Logo">
+        </div>
+        <div class="logo">Union Bank</div>
+        <ul class="nav-links">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="../public/services.html">Services</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Select Language</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="changeLanguage('en')">English</a>
+                    <a href="../public/hindi.html" onclick="changeLanguage('hi')">हिंदी</a>
+                    <a href="../public/hindi.html" onclick="changeLanguage('mr')">मराठी</a>
+                </div>
+            </li>
+            <li><a href="../public/login.html">Login/Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2 id="dashboard-title">Dashboard</h2>
+        <ul>
+            <li id="stats">Statistics</li>
+            <li id="report">Report</li>
+            <li id="notifications">Notifications</li>
+            <li id="settings">Settings</li>
+            <li id="logout">Logout</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="balance-card">
+            <h2 id="total-balance">Total Balance</h2>
+            <p id="balance-amount">₹0</p>
+            <p id="card-info">Card Info: No Account Linked</p>
+        </div>
+
+        <!-- Customer Services -->
+        <div class="services">
+            <h2 id="customer-services">Customer Services</h2>
+            <div class="service-buttons">
+                <button id="offline-mode">Simulate Offline Mode</button>
+                <button id="voice-query">Voice Query</button>
+                <button id="service-ticket">Service Ticket</button>
+                <button id="appointment">Appointment</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="language.js"></script>
+</body>
+</html>

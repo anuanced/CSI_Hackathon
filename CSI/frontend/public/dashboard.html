@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Union Bank Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="../public/logo.png" alt="Union Bank Logo">
+        </div>
+        <h1>Union Bank</h1>
+        <ul>
+            <li class="dropdown">
+                <a href="../../Frontend/public/services.html">Services</a>   
+            <li><a href="#contact">Contact Us</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Select Language
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
+                    <li><a class="dropdown-item" href="../../Frontend/public/hindi.html" onclick="changeLanguage('hi')">हिंदी</a></li>
+                    <li><a class="dropdown-item" href="../../Frontend/public/hindi.html" onclick="changeLanguage('mr')">मराठी</a></li>
+                </ul>
+            </li>
+             <li><a href="../../Frontend/public/login.html">Login/Register</a></li>
+        </ul>
+    </nav>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h1>Dashboard</h1>
+            <nav>
+                <ul>
+                    <li>Statistics</li>
+                    <li>Report</li>
+                    <li>Notifications</li>
+                    <li>Settings</li>
+                    <li>Logout</li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section class="balance">
+                <h2>Total Balance</h2>
+                <p>₹4,000</p>
+                <p>Card Info: Neha Sharma - ****9012</p>
+            </section>
+            <section class="customer-services">
+                <h3>Customer Services</h3>
+                <div class="service-grid">
+                    <div class="service">Simulate Offline Mode</div>
+                    <div class="service">Voice Query</div>
+                    <div class="service">Service Ticket</div>
+                    <div class="service">Appointment</div>
+                </div>
+            </section>
+            <section class="transactions">
+                <h3>Past Transactions</h3>
+                <div class="transaction">Swiggy - ₹1,000</div>
+                <div class="transaction">Swiggy - ₹500</div>
+                <div class="transaction">Zomato - ₹1,000</div>
+                <div class="transaction">Swiggy - ₹200</div>
+            </section>
+        </main>
+    </div>
+    
+    
+</body>
+</html>
